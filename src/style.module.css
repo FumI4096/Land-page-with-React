@@ -1,0 +1,36 @@
+:root{
+    --background: rgb(253, 180, 216);
+    --background2: rgb(255, 208, 232);
+    --layout-size: 700px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.layout{
+    height: var(--layout-size);
+    background-image: url('./pictures/background-header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+}
+
+.layout::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.layout2{
+    height: var(--layout-size);
+    background-color: var(--background2);
+}
