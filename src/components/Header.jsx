@@ -1,5 +1,6 @@
 import React from "react";
-import style from '../style.module.css';
+import Nav from './Nav';
+import style from '../styles/style.module.css';
 
 const Header = () => {
     const styleQuote = {
@@ -10,6 +11,7 @@ const Header = () => {
     };
     return(
         <>
+            <Nav />
             <header className={style.layout}>
                 <h1 style={styleQuote}>Satisfaction at best</h1>
             </header>
@@ -17,4 +19,4 @@ const Header = () => {
     );
 }
 
-export { Header };
+export default Header
