@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+
 :root{
     --background: rgb(253, 180, 216);
     --background2: rgb(255, 208, 232);
-    --layout-size: 700px;
+    --layout-size: 770px;
+    --padding: 0 90px;
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Belanosima';
 }
 
 .layout{
@@ -33,4 +38,15 @@
 .layout2{
     height: var(--layout-size);
     background-color: var(--background2);
+}
+
+nav{
+    padding: var(--padding);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
 }
