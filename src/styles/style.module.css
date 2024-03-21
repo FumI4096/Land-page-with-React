@@ -5,7 +5,7 @@
     --background: rgb(253, 180, 216);
     --background2: rgb(255, 208, 232);
     --layout-size: 770px;
-    --padding: 0 90px;
+    --padding: 20px 90px;
 }
 
 *{
@@ -16,7 +16,7 @@
 
 .layout{
     height: var(--layout-size);
-    background-image: url('./pictures/background-header.jpg');
+    background-image: url('../images/background-header.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,17 +36,7 @@
 }
 
 .layout2{
+    padding: var(--padding);
     height: var(--layout-size);
     background-color: var(--background2);
-}
-
-nav{
-    padding: var(--padding);
-    height: 70px;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.5);
 }
