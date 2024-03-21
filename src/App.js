@@ -1,9 +1,15 @@
-// import React from 'react';
+import React from 'react';
+// import { Nav } from './components/Nav';
+import { Header } from './components/Header';
+import Footer from './components/Footer';
 
-// function App() {
-//   return (
-//     <h1></h1>
-//   );
-// }
+function App() {
+    return (
+        <>
+            <Header />
+            <Footer />
+        </>
+    );
+}
 
-// export default App;
+export default App;
