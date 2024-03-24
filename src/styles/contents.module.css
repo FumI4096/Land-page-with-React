@@ -1,0 +1,25 @@
+:root{
+    --grid-padding: 50px;
+}
+
+.layoutTemp{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 1rem;
+    height: 800px;
+    width: 65%;
+    background-color: aqua;
+    padding: var(--grid-padding);
+}
+
+.cards {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+.layoutAside{
+    width: 5%;
+    height: 800px;
+    background-color: white;
+}
