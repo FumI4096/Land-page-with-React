@@ -10,30 +10,41 @@ const Footer = () => {
     const styleSect = {
         display: 'flex',
         justifyContent: 'space-between',
+        borderBottom: '2px solid black',
+        flexWrap: 'wrap',
+    }
 
+    const styleFooterHeader = {
+        fontSize: '2rem',
+        marginBottom: '2rem',
+    }
+
+    const layoutFootSect = {
+        height: '200px',
+        width: '400px',
     }
     return (
-        <footer className={style.layout2}>
-            <h2>VibeChecks</h2>
+        <footer className={style.styleFooter}>
+            <h2 style={styleFooterHeader}>VibeChecks</h2>
             <section style={styleSect}>
-                <article>
-                    <ul>
-                        <a href="#facebook">
-                            <li><FaFacebook /></li>
-                        </a>
-                        <a href="#google">
-                            <li> <FaGooglePlus /></li>
-                        </a>
-                        <a href="#twitter">
-                            <li><AiFillTwitterCircle /></li>
-                        </a>
-                        <a href="#instagram">
-                            <li><TiSocialInstagram /></li>
-                        </a>
+                <article style={layoutFootSect}>
+                    <ul className={style.iconLayout}>
+                        <li>
+                            <a href="#facebook"><FaFacebook /></a>
+                        </li>
+                        <li>
+                            <a href="#google"><FaGooglePlus /></a>
+                        </li>
+                        <li>
+                            <a href="#twitter"><AiFillTwitterCircle /></a>
+                        </li>
+                        <li>
+                            <a href="#instagram"><TiSocialInstagram /></a>
+                        </li>
                     </ul>
                 </article>
-                <article>
-                    <ul>
+                <article style={layoutFootSect}>
+                    <ul className={style.callersLayout}>
                         <li>
                             <h2>Indonesia</h2>
                             <h3>Alethea Evergreen</h3>
@@ -48,18 +59,26 @@ const Footer = () => {
                         </li>
                     </ul>
                 </article>
-                <aside>
-                    
-                    <div>
+                <aside style={layoutFootSect}>
+                    <div className = {style.formLayout}>
                         <form action="">
-                            <label htmlFor="email">Enter your email:</label>
-                            <input type="email" id="email"/>
-                            <input type="submit" value="Submit" />
+                            <div>
+                                <h2><label htmlFor="email">Contact Us</label>
+                                </h2>
+                            </div>
+                            <div>
+                                <input type="email" id="email" placeholder="Your email goes here"/>
+                                <input type="submit" value="Subscribe" />
+                            </div>
+
                         </form>
                     </div>
-                    <p>&#169; 2024 VibeChecks. All rights reserved.</p>
+
                 </aside>
 
+            </section>
+            <section className={style.Copyright}>
+                <p>&#169; 2024 VibeChecks. All rights reserved.</p>
             </section>
 
 

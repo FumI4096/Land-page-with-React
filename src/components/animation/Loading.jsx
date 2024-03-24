@@ -1,7 +1,7 @@
 // import { useState, useEffect } from "react";
 // import ClipLoader from "react-spinners/ClipLoader";
 import { FaCheck } from "react-icons/fa6";
-import style from './loading.module.css';
+import style from '../../styles/loading.module.css';
 
 
 function Loading() {
