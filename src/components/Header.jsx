@@ -7,7 +7,7 @@ const Header = () => {
         fontFamily: 'Edu NSW ACT Foundation',
         color: '#fff',
         zIndex: '5',
-        fontSize: '5rem',
+        fontSize: 'clamp(2.7rem, 3.5vw, 5rem)',
     };
     return(
         <>

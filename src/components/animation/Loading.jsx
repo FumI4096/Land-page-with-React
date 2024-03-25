@@ -8,35 +8,23 @@ function Loading() {
     /*const [loading, setLoading] = useState(true);
     const [delayTime, setDelayTime] = useState(2000);
 
+    /*
     const override = {
         display: "block",
         margin: "0 auto",
         borderColor: "red",
     };
     
-
-    useEffect(() => {
+    */
+    /*useEffect(() => {
         const timeout = setTimeout(() => {
             setLoading(false);
         }, delayTime - 1200);
 
         return () => clearTimeout(timeout);
 
-    }, [setDelayTime]); 
-
-    return (
-        <div className="sweet-loading">
-
-            <ClipLoader
-                // color={color}
-                loading={loading}
-                cssOverride={override}
-                size={150}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-            />
-        </div>
-    );*/
+    }, [setDelayTime]); */
+    
 
     return (
         <div className={style.LoadingBar}>
