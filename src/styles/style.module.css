@@ -7,6 +7,7 @@
     --background2: rgb(243, 171, 208);
     --layout-size: 770px;
     --padding: 20px 90px;
+    --nav-padding: 0 60px 0 90px;
 }
 
 *{
@@ -22,7 +23,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     isolation: isolate;
@@ -42,10 +44,27 @@
     background-color: var(--background2);
 }
 
+
+/*FOOTER LAYOUT*/
 .styleFooter{
     padding: var(--padding);
     height: auto;
     background-color: var(--background2);
+}
+
+.styleSect{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.layoutFootSect{
+    display: flex;
+    height: 200px;
+    width: 400px;
 }
 
 .iconLayout, .callersLayout{
@@ -53,17 +72,19 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .iconLayout li > a{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
+    height: auto;
+    padding: 0.6rem;
+    width: auto;
     background-color: rgb(165, 77, 114);
-    font-size: 1.6rem;
+    font-size: 2rem;
     border-radius: 50%;
     color: white;
     transition: box-shadow 0.3s;
@@ -77,26 +98,27 @@
     font-family: 'Wix Madefor Text';
     font-size: 0.9rem;
 }
-.callersLayout li > h2{
-    margin-bottom: 2rem;
+
+.callersLayout li > h2, .formLayout form div:nth-child(1) > h2{
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
 }
 
-.formLayout form > div:nth-child(1){
-    margin-bottom: 2rem;
+.formLayout, .formLayout form{
+    width: 100%;
 }
 
 .formLayout form div:nth-child(2){
-    width: 300px;
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 0.5rem;
 }
 
 .formLayout form div:nth-child(2) > input{
-    height: 40px;
+    height: 45px;
     border-radius: 100px;
     font-size: 1rem;
-    
 }
 
 .formLayout form div:nth-child(2) > input[type="email"]{
@@ -122,4 +144,124 @@
 
 .formLayout form div:nth-child(2) > input[type="submit"]:active{
     background-color: rgb(90, 42, 62);
+}
+
+@media only screen and (max-width: 1443px){
+    :root{
+        --layoutFootSectPadding: 0 0 2.5rem 0;
+    }
+    .layoutFootSect{
+        padding: var(--layoutFootSectPadding);
+        height: auto;
+    }
+
+    .layoutFootSect:nth-child(1){
+        order: 2;
+    }
+    .iconLayout{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .iconLayout li > a {
+        height: auto;
+        width: auto;
+        padding: 0.78rem;
+        font-size: 2rem;
+    }
+    .layoutFootSect:nth-child(2){
+        order: 1;
+    }
+    .layoutFootSect:nth-child(3){
+        order: 3;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    :root{
+        --nav-padding: 0 70px;
+    }
+    .layout{
+        height: 500px;
+    }
+    
+}
+
+@media only screen and (max-width: 1011px){
+    :root{
+        --layoutFootSectPadding: 2.5rem 0 2.5rem 0
+    }
+    .styleSect{
+        justify-content: center;
+    }
+    .layoutFootSect{
+        padding: var(--layoutFootSectPadding);
+        height: auto;
+        width: 100%;
+    }
+    .iconLayout, .callersLayout{
+        justify-content: space-around;
+    }
+    .formLayout{
+        width: 70%;
+    }
+    .layoutFootSect:nth-child(1){
+        order: 3;
+    }
+    .layoutFootSect:nth-child(2){
+        border-top: 2px solid black;
+        order: 1;
+    }
+    .layoutFootSect:nth-child(3){
+        border-top: 2px solid black;
+        order: 2;
+        justify-content: center;
+    }
+
+    .formLayout form div:nth-child(2) > input{
+        font-size: 1.25rem;
+        height: 60px;
+    }
+
+    .Copyright > p{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 726px) {
+    :root{
+        --nav-padding: 0 54px;
+        --layoutFootSectPadding: 2.5rem 0 1rem 0
+    }
+    .layout{
+        height: 350px;
+    }
+    .layoutFootSect{
+        padding: var(--layoutFootSectPadding);
+    }
+    .formLayout form div > h2{
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width: 603px){
+    :root{
+        
+        --padding: 20px 65px;
+    }
+    .layout{
+        height: 300px;
+    }
+    .formLayout{
+        width: 100%;
+    }
+    .callersLayout{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .callersLayout li > h2{
+        margin: 0;
+    }
 }
