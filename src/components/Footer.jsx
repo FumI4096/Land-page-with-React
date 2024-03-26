@@ -3,31 +3,25 @@ import { FaFacebook } from "react-icons/fa";
 import { FaGooglePlus } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { TiSocialInstagram } from "react-icons/ti";
-import style from '../styles/style.module.css'
+import style from '../styles/style.module.css';
+import styled from 'styled-components';
 
 const Footer = () => {
 
-    const styleSect = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        borderBottom: '2px solid black',
-        flexWrap: 'wrap',
-    }
+    const FooterHeader = styled.h2 `
+        font-size: 2rem;
+        margin-bottom: 2rem;
 
-    const styleFooterHeader = {
-        fontSize: '2rem',
-        marginBottom: '2rem',
-    }
+        @media only screen and (max-width: 1011px){
+            text-align: center;
+        }
+    `;
 
-    const layoutFootSect = {
-        height: '200px',
-        width: '400px',
-    }
     return (
         <footer className={style.styleFooter}>
-            <h2 style={styleFooterHeader}>VibeChecks</h2>
-            <section style={styleSect}>
-                <article style={layoutFootSect}>
+            <FooterHeader>VibeChecks</FooterHeader>
+            <section className={style.styleSect}>
+                <article className={style.layoutFootSect}>
                     <ul className={style.iconLayout}>
                         <li>
                             <a href="#facebook"><FaFacebook /></a>
@@ -43,7 +37,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </article>
-                <article style={layoutFootSect}>
+                <article className={style.layoutFootSect}>
                     <ul className={style.callersLayout}>
                         <li>
                             <h2>Indonesia</h2>
@@ -59,7 +53,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </article>
-                <aside style={layoutFootSect}>
+                <aside className={style.layoutFootSect}>
                     <div className = {style.formLayout}>
                         <form action="">
                             <div>
@@ -70,12 +64,9 @@ const Footer = () => {
                                 <input type="email" id="email" placeholder="Your email goes here"/>
                                 <input type="submit" value="Subscribe" />
                             </div>
-
                         </form>
                     </div>
-
                 </aside>
-
             </section>
             <section className={style.Copyright}>
                 <p>&#169; 2024 VibeChecks. All rights reserved.</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from './Nav';
 import style from '../styles/style.module.css';
+import styled from 'styled-components';
 
 const Header = () => {
     const styleQuote = {
@@ -9,11 +10,21 @@ const Header = () => {
         zIndex: '5',
         fontSize: 'clamp(2.7rem, 3.5vw, 5rem)',
     };
+
+    const ContainerQuote = styled.div `
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `;
+
     return(
         <>
-            <Nav />
             <header className={style.layout}>
-                <h1 style={styleQuote}>Satisfaction at best</h1>
+                <Nav />
+                <ContainerQuote>
+                    <h1 style={styleQuote}>Satisfaction at best</h1>
+                </ContainerQuote>
             </header>
         </>
     );

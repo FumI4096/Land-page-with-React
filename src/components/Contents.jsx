@@ -66,8 +66,6 @@ const Contents = () => {
                 padding: 'var(--padding)',
                 flexWrap: 'wrap',
                 gap: '1rem',
-
-
             }}>
                 <GridContainer>
                     <ContentTitle>Check your Views</ContentTitle>

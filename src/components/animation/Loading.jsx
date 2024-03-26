@@ -1,38 +1,37 @@
-// import { useState, useEffect } from "react";
-// import ClipLoader from "react-spinners/ClipLoader";
+import { useState, useEffect } from "react";
 import { FaCheck } from "react-icons/fa6";
 import style from '../../styles/loading.module.css';
 
-
 function Loading() {
-    /*const [loading, setLoading] = useState(true);
-    const [delayTime, setDelayTime] = useState(2000);
+    const [loading, setLoading] = useState(true);
 
-    /*
-    const override = {
-        display: "block",
-        margin: "0 auto",
-        borderColor: "red",
-    };
-    
-    */
-    /*useEffect(() => {
+    useEffect(() => {
         const timeout = setTimeout(() => {
-            setLoading(false);
-        }, delayTime - 1200);
+            setLoading(false);  
+        }, 2000);
 
         return () => clearTimeout(timeout);
+    }, []); 
 
-    }, [setDelayTime]); */
-    
+    useEffect(() => {
+        if(loading){
+            document.body.style.overflow = 'hidden';
+        } 
+        else{
+            document.body.style.overflow = 'visible';
+        }
+    }, [loading]);
 
     return (
-        <div className={style.LoadingBar}>
-            <div className={style.LoadingWrap}>
-                <FaCheck className={style.loadingIcon} />
-            </div>
-        </div>
-
+        <>
+            {loading && (
+                <div className={style.LoadingBar}>
+                    <div className={style.LoadingWrap}>
+                        <FaCheck className={style.loadingIcon} />
+                    </div>
+                </div>
+            )}
+        </>
     );
     
 }
