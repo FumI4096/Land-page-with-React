@@ -183,6 +183,6 @@ __Displays the style of the wrapper of ```.loadingIcon```. In addition, the font
     }
 }
 ```
-__As stated from the ```.LoadingWrap``` selector, the names that is _ColorLoad_ and _RotateCircle_ are indication that an animation is made specifically. The given animations are done through ```@keyframes``` which provides the overall flow the animation.__
+__As stated from the ```.LoadingWrap``` selector, the names that is _ColorLoad_ and _RotateCircle_ are indication that an animation is made specifically. The given animations are done through ```@keyframes``` which provides the overall flow ofthe animation.__
 + The **_ColorLoad_** is used to change he shadow color sequentially.
 + The **_RotateCircle_** is used to change the rotation of the icon.
